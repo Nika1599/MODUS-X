@@ -1,7 +1,7 @@
 :root {
   --font-family: 'Ordina-WideBold', sans-serif;
   --second-family: 'Ordina-Regular', sans-serif;
-  --third-family: 'Ordina-Bd', sans-serif;
+  --third-family: 'Ordina-Bold', sans-serif;
   --font3: 'Ordina-Wide', sans-serif;
   --font4: 'Ordina W05', sans-serif;
 }
@@ -126,7 +126,7 @@ h3 {
   color: #fff;
   width: 630px;
   height: 144px;
-  margin-bottom: 64px;
+  margin-bottom: 60px;
 }
 
 .item:hover .example-title,
@@ -146,6 +146,9 @@ h3 {
   margin-right: 82px;
 }
 
+.see-more {
+  display: none;
+}
 .solution {
   margin-right: 170px;
 }
@@ -167,11 +170,15 @@ h3 {
   padding-top: 55px;
   padding-bottom: 182px;
   margin-left: 98px;
+  margin-right: 20px;
 }
 .yasno-logo {
   width: 108px;
   height: 36px;
   margin-left: 390px;
+}
+.image-mobile {
+  display: none;
 }
 
 .item {
@@ -184,4 +191,207 @@ h3 {
 .item:hover,
 .item:focus {
   background-color: #d9d9d9;
+}
+
+.item {
+  position: relative;
+  overflow: hidden; /* Приховує вміст, що виходить за межі контейнера */
+}
+
+.logo-container {
+  position: relative;
+  display: inline-block;
+  width: 68px; /* Ширина SVG */
+  height: 32px; /* Висота SVG */
+}
+
+.logo-part {
+  position: relative;
+  display: flex;
+  align-items: center; /* Для вирівнювання логотипа та зображення */
+}
+
+.image-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow: hidden;
+  transition: top 0.5s ease-in-out;
+}
+
+.item:hover .image-wrapper {
+  top: 0;
+  opacity: 1;
+}
+
+.image-slider {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 708px;
+    height: 227px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .item {
+    display: block;
+  }
+  .example-title {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 110%;
+    color: #d9d9d9;
+    margin-bottom: 64px;
+    width: 468px;
+    height: 42px;
+  }
+
+  .button {
+    border-radius: 19px;
+    padding: 8px 14px 12px 14px;
+    width: 241px;
+    height: 36px;
+    margin-bottom: 60px;
+  }
+
+  .additional-button {
+    padding: 12px 30px 16px 30px;
+    width: 276px;
+    height: 54px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 100%;
+    font-family: 'Ordina-Bold', sans-serif;
+  }
+
+  .example-title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    color: #fff;
+    width: 468px;
+    height: 114px;
+    margin-bottom: 20px;
+  }
+  .example-description {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+    width: 468px;
+    height: 93px;
+    margin-bottom: 60px;
+  }
+
+  .see-more {
+    display: inline;
+    color: #ffc9dc;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 100%;
+    border-bottom: 2px solid #ffc9dc;
+    padding: 5px 0px;
+  }
+
+  .image-mobile {
+    display: block;
+  }
+}
+
+.item {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  transition: all 0.3s ease;
+}
+
+.item:hover,
+.item:focus {
+  background-color: #d9d9d9;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 708px;
+    height: 227px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .example-title {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 110%;
+    color: #d9d9d9;
+    margin-bottom: 64px;
+    width: 468px;
+    height: 42px;
+  }
+
+  .button {
+    border-radius: 19px;
+    padding: 8px 14px 12px 14px;
+    width: 241px;
+    height: 36px;
+    margin-bottom: 60px;
+  }
+
+  .additional-button {
+    padding: 12px 30px 16px 30px;
+    width: 276px;
+    height: 54px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 100%;
+    font-family: 'Ordina-Bold', sans-serif;
+  }
+
+  .example-title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    color: #fff;
+    width: 468px;
+    height: 114px;
+    margin-bottom: 20px;
+  }
+  .example-description {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+    width: 468px;
+    height: 93px;
+    margin-bottom: 60px;
+  }
+
+  .see-more {
+    display: inline;
+    color: #ffc9dc;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 100%;
+    border-bottom: 2px solid #ffc9dc;
+    padding: 5px 0px;
+  }
+
+  .image-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    overflow: visible;
+    transition: none;
+    width: 225px;
+    height: 225px;
+  }
+
+  .item {
+    display: block;
+  }
 }
